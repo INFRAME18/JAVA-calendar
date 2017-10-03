@@ -12,20 +12,10 @@ public class Calendar {
 		
 		//입력하는 달의 최대 일수를 출력하는 프로그램
 		Scanner scanner = new Scanner(System.in);
+		System.out.println("Month를 입력해주세요.");
 		int num = scanner.nextInt();
-		
-		if(num == 1 || num == 3 || num == 5 || num == 7 || num == 8 || num ==10 || num==12) {
-			System.out.printf("%s월은 31일까지 있습니다.",num);
-		} else if(num ==  2 || num == 4 || num == 6 || num == 9 || num == 11) {
-			if(num == 2) {
-				System.out.println("2월은 28일(윤년엔 29일)까지 있습니다.");
-			}else {
-				System.out.printf("%s월은 30일까지 있습니다.",num);
-			}
-		}
-		else {
-			System.out.println("이런 달은 없습니다.");
-		}
+		int[] finalDay = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		System.out.printf("%d달의 마지막 날은 %d일 입니다.", num, finalDay[num-1]);
 		scanner.close();
 					
 				}
